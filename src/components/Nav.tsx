@@ -1,6 +1,5 @@
 "use client";
 import { useState } from "react";
-import { FaBars, FaTimes, FaLinkedin, FaFacebook, FaInstagram } from "react-icons/fa";
 import Image from "next/image";
 export default function Footer() {
   const [menuOpen, setMenuOpen] = useState(false);
