@@ -6,8 +6,8 @@ export default function Footer() {
 
   return (
     
-    <div className="fixed z-50 bg-white w-full py-0 text-black">
-      <div className="container mx-auto flex flex-wrap items-center justify-between px-6">
+    <div className="fixed z-50 bg-white w-full  py-0 text-black">
+      <div className="container mx-auto mt-1 mb-1 flex flex-wrap items-center justify-between px-6">
         
         {/* Logo */}
         <div className="text-2xl font-bold md:pl-20">
