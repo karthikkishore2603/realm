@@ -10,14 +10,14 @@ interface BlogCardProps {
 const BlogCard = ({ cover, title, tags }: BlogCardProps) => {
 return (
     <Link href="/Impactstudies-content">
-    <div className="bg-white h-full dark:bg-gray-950 border border-gray-100 dark:border-gray-900 duration-300 ease-linear hover:border-gray-200 dark:hover:border-gray-800 p-0.5 flex flex-col group">
+    <div className="bg-white h-full  border-blue-900  duration-300 ease-linear hover:border-gray-800  p-0.5 flex flex-col group">
         <Image alt="banner image" className="w-full aspect-video object-cover relative" src={cover} width={1263} height={1291} />
         <div className="px-4 lg:px-6 py-5 lg:py-8">
-            <Link  className="text-gray-900 dark:text-white font-semibold text-2xl lg:text-3xl" href="#">{title}</Link>
+            <Link  className="text-gray-900  font-semibold text-2xl lg:text-3xl" href="#">{title}</Link>
             <div className="flex flex-wrap gap-x-2 w-full gap-y-3 pt-5">
                 {
                     tags.map((tag, index)=>(
-                        <span key={`tag${index}`} className="bg-gray-100 dark:bg-gray-900 text-blue-600 dark:text-gray-200 px-2">
+                        <span key={`tag${index}`} className="bg-gray-100  text-blue-600  px-2">
                             {tag}
                         </span>
                     ))
@@ -31,7 +31,7 @@ return (
 const posts = [
 {
     id: 1,
-    cover: "/images/working-on-housing-project.jpg",
+    cover: "/impact-card.webp",
     title: "How to Sructure your reactJs Application like a Legend ",
     tags:[
         "ReactJs","WebDesign", "Web Development"
@@ -39,7 +39,7 @@ const posts = [
 },
 {
     id: 2,
-    cover: "/images/working-on-housing-project.jpg",
+    cover: "/impact-card.webp",
     title: "How to Sructure your reactJs Application like a Legend ",
     tags:[
         "ReactJs","WebDesign", "Web Development"
@@ -47,7 +47,7 @@ const posts = [
 },
 {
     id: 3,
-    cover: "/images/working-on-housing-project.jpg",
+    cover: "/impact-card.webp",
     title: "How to Sructure your reactJs Application like a Legend ",
     tags:[
         "ReactJs","WebDesign", "Web Development"
@@ -55,7 +55,7 @@ const posts = [
 },
 {
     id: 4,
-    cover: "/images/working-on-housing-project.jpg",
+    cover: "/impact-card.webp",
     title: "How to Sructure your reactJs Application like a Legend ",
     tags:[
         "ReactJs","WebDesign", "Web Development"

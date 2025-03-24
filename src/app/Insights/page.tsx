@@ -1,12 +1,12 @@
 import Nav from '@/components/Nav';
-import Impactstudies from './Impactstudies'
 import Footer from '@/components/Footer';
+import Insights from './Insights'
 
 export default function Page() {
   return (
     <>
     <Nav />
-    <Impactstudies />
+    <Insights />
     <Footer />
     </>
   );

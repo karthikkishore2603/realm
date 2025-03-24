@@ -18,7 +18,7 @@ export default function Footer() {
         <nav className="hidden md:flex items-center space-x-8 text-lg">
           <a href="#" className="hover:underline">Home</a>
           <a href="#" className="hover:underline">Our Services</a>
-          <a href="#" className="hover:underline">Insights</a>
+          <a href="/Insights" className="hover:underline">Insights</a>
           <a href="/Impactstudies" className="hover:underline">Impact Studies</a>
           <a href="#" className="bg-black text-white px-6 py-2 rounded-full font-semibold">
             Contact Us
