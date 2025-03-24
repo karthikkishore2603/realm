@@ -19,6 +19,7 @@ export default function Footer() {
           <a href="#" className="hover:underline">Home</a>
           <a href="#" className="hover:underline">Our Services</a>
           <a href="#" className="hover:underline">Insights</a>
+          <a href="/Impactstudies" className="hover:underline">Impact Studies</a>
           <a href="#" className="bg-black text-white px-6 py-2 rounded-full font-semibold">
             Contact Us
           </a>
@@ -45,7 +46,7 @@ export default function Footer() {
         <div className="md:hidden mt-4 text-center p-4 flex flex-col space-y-2">
           <a href="#" className="py-2  text-2xl text-black hover:text-gray-400">Home</a>
           <a href="#" className="py-2  text-2xl text-black hover:text-gray-400">Our Services</a>
-          <a href="#" className="py-2  text-2xl text-black hover:text-gray-400">Insights</a>
+          <a href="/Impactstudies" className="py-2  text-2xl text-black hover:text-gray-400">Insights</a>
           <a href="#" className="mt-4  text-2xl px-6 py-2 bg-black text-white rounded-full">Contact Us</a>
         </div>
       )}
