@@ -1,7 +1,7 @@
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
 
-import Impactcontent from '../Impactstudies-content/Impactstudies-content'
+import Impactcontent from './insights-details'
 export default function Page() {
   return (
     <>

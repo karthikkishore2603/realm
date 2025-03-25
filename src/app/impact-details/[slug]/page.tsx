@@ -1,17 +1,12 @@
 import Nav from '@/components/Nav';
-import Impactstudies from './Impactstudies'
-import Breadcrumb from './breadcrumb';
 import Footer from '@/components/Footer';
 
+import Impactcontent from './impact-studies-details'
 export default function Page() {
   return (
     <>
     <Nav />
-  
-    <Breadcrumb/>
-
-   
-    <Impactstudies />
+    <Impactcontent />
     <Footer />
     </>
   );
