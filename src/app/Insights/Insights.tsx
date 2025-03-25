@@ -73,7 +73,7 @@ const BlogCard = ({ post }: { post: BlogPost }) => {
               <Link
                 key={category._id}
                 href={`/category/${category.slug.current}`}
-                className="text-xs font-medium px-2.5 py-1 rounded-full bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-100 hover:bg-blue-200 dark:hover:bg-blue-800 transition-colors"
+                className="text-xs font-medium px-2.5 py-1 rounded-full bg-blue-100 text-blue-800 dark:bg-blue-900  hover:bg-blue-200  transition-colors"
               >
                 {category.title}
               </Link>
@@ -91,7 +91,7 @@ const BlogCard = ({ post }: { post: BlogPost }) => {
 
       <Link
         href={`/insights-details/${post.slug.current}`}
-        className="text-lg font-semibold text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+        className="text-lg font-semibold text-gray-900  hover:text-blue-600 transition-colors"
       >
         {post.title}
       </Link>
@@ -142,12 +142,12 @@ const BlogList = () => {
         }`;
 
         const fetchedPosts = await sanityClient2.fetch(query);
-        const validPosts = fetchedPosts.filter(
-          (post) =>
+        const validPosts: BlogPost[] = fetchedPosts.filter(
+          (post: BlogPost) =>
             post.slug?.current &&
             (!currentCategory ||
               currentCategory === "All" ||
-              post.categories?.some((cat) => cat.title === currentCategory))
+              post.categories?.some((cat: Category) => cat.title === currentCategory))
         );
 
         setPosts(validPosts);

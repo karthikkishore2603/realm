@@ -43,8 +43,8 @@ export default function BrandCards() {
           >
             {service.icon}
           </div>
-          <h3 className="text-gray-700 mt-3 text-lg font-semibold">{service.title}</h3>
-          <p className="text-gray-500 mb-12 text-sm mt-2">{service.description}</p>
+          <h3 className="text-gray-700 mt-3 text-2xl font-semibold">{service.title}</h3>
+          <p className="text-gray-600 mb-12 text-lg mt-2">{service.description}</p>
         </motion.div>
       ))}
     </div>

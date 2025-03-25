@@ -5,28 +5,28 @@ import Image from "next/image";
 
 const testimonials = [
   {
-    name: "CEO of 1",
-    text: "Company was very helpful, helping me to connect with potential prospects and expand my reach significantly.",
+    name: "Finequs",
+    text: "Realm delivered a sleek and high-performing website that perfectly aligned with our fintech needs. Their expertise in UX/UI made all the difference!",
     image: "/te1.png",
   },
   {
-    name: "CEO of 2",
-    text: "Great experience! This platform helped me find the right people and expand my reach significantly.",
+    name: "Coventry Road Dental Care",
+    text: "Thanks to Realm, our dental practice now has a modern, user-friendly website that makes booking appointments effortless for our patients!.",
     image: "/te1.png",
   },
   {
-    name: "CEO of 3",
-    text: "Very useful service! It helped us scale our business and reach new markets.",
+    name: "The Green House Barbecue",
+    text: "Realm created a stunning website that truly captures the essence of our barbecue restaurant. The online menu and ordering system work flawlessly!",
     image: "/te1.png",
   },
   {
-    name: "CEO of 4",
-    text: "An amazing solution! We streamlined our operations and grew faster than ever before.",
+    name: "V5 Digital",
+    text: "Partnering with Realm was a game-changer! Their web development skills brought our digital marketing agency's site to life with speed and style.",
     image: "/te1.png",
   },
   {
-    name: "CEO of 5",
-    text: "The best service for expanding your network and growing your business!",
+    name: "ZGuard",
+    text: "Security is our priority, and Realm built us a robust, professional website that reflects our brand’s reliability and trustworthiness.",
     image: "/te1.png",
   },
 ];
@@ -46,8 +46,8 @@ export default function Testimonials() {
       <h2 className="text-3xl md:text-4xl text-black font-bold">
         Hear Their Experience
       </h2>
-      <p className="text-gray-500 mt-2 max-w-lg md:max-w-2xl mx-auto text-sm md:text-base">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      <p className="text-gray-500 mt-2 max-w-lg md:max-w-3xl mx-auto text-sm md:text-base">
+      Real stories from our satisfied customers—see what they have to say!
       </p>
 
       <div className="relative flex justify-center items-center mt-10 h-72 md:h-96 overflow-hidden">

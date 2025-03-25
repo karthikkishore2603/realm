@@ -39,7 +39,7 @@ const Counter = ({ end, prefix = "", suffix = "", isVisible }: CounterProps) => 
       initial={{ opacity: 0 }}
       animate={{ opacity: isVisible ? 1 : 0 }}
       transition={{ duration: 1 }}
-      className="text-7xl font-bold text-gray-900"
+      className="text-7xl font-semibold text-gray-900"
     >
       {prefix}
       {count}
@@ -77,7 +77,7 @@ export default function StatsSection() {
       
       
     >
-        <div className="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-50 py-10 bg-white">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-50 py-10">
       {/* Conversion Rate Increased */}
       <div className="text-center">
         <Counter end={150} prefix="+" suffix="%" isVisible={isVisible} />

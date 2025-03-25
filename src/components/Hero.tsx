@@ -7,19 +7,19 @@ export default function BrandingPage() {
     <div className="relative flex flex-col md:flex-row items-center justify-between min-h-screen bg-white px-6 pt-40 md:px-40 py-10">
       {/* Left Section - Text Content */}
       <div className="md:w-1/2 space-y-6">
-        <h1 className="text-4xl md:text-7xl font-bold text-gray-900 leading-tight">
-          Become the <br/><span className="text-black font-extrabold">Top 1% </span> Brand
+        <h1 className="text-4xl md:text-7xl font-semibold text-gray-900 leading-tight">
+          Become the <br/>Top 1%  Brand
         </h1>
         <p className="text-2xl text-gray-600">
           We build your brand while you focus on your business.
         </p>
         <button className="mt-6 px-6 py-3 text-white bg-black rounded-full font-semibold shadow-md hover:bg-gray-800 transition">
-          GET STARTED
+          Contact Us
         </button>
       </div>
       
       {/* Right Section - Images & Visual Elements */}
-      <div className="relative md:w-1/2 mt-20 md:mt-0  flex items-center justify-center">
+      <div className="relative sm:w-0 md:w-1/2 mt-20 md:mt-0  flex items-center justify-center">
         {/* Background Line Design */}
         <div className="absolute -top-10 left-1/2 transform -translate-x-1/2">
           <Image src="/bg_line.png" alt="Background Line" width={400} height={400} style={{ maxWidth: '450px' }}/>

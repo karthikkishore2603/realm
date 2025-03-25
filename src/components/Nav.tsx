@@ -7,11 +7,11 @@ export default function Footer() {
   return (
     
     <div className="fixed z-50 bg-white w-full  py-0 text-black">
-      <div className="container mx-auto mt-1 mb-1 flex flex-wrap items-center justify-between px-6">
+      <div className="container mx-auto mt-4 mb-4 flex flex-wrap items-center justify-between pr-10">
         
         {/* Logo */}
-        <div className="text-2xl font-bold md:pl-20">
-          <Image src="/lg.png" alt="Logo" width={150} height={40} />
+        <div className="text-xl font-bold pl-0 md:pl-20">
+          <Image src="/lg.png" alt="Logo" width={120} height={40} />
         </div>
 
         {/* Desktop Navigation */}
@@ -26,7 +26,7 @@ export default function Footer() {
         </nav>
 
         {/* Mobile Menu Toggle */}
-        <div className="md:hidden">
+        <div className="md:hidden ml-auto ">
           <button onClick={() => setMenuOpen(!menuOpen)} className="focus:outline-none">
             <svg
               className="w-6 h-6 text-black"
