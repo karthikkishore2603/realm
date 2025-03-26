@@ -1,13 +1,13 @@
 "use client";
 import React from "react";
-import Link from "next/link";
+// import Link from "next/link";
 import Image from "next/image";
 
 export default function Breadcrumb() {
-  const breadcrumbItems = [
-    { label: "Home", href: "/" },
-    { label: "New Impact", href: "/newimpact" },
-  ];
+  // const breadcrumbItems = [
+  //   { label: "Home", href: "/" },
+  //   { label: "New Impact", href: "/newimpact" },
+  // ];
 
   return (
     <nav
