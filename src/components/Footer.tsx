@@ -20,7 +20,7 @@ interface FooterBlockItemProps {
     items: { id: number; text: string; link: string }[];
 }
 
-const FooterBlockItem = ({ title, items }: FooterBlockItemProps) => {
+const FooterBlockItem = ({  items }: FooterBlockItemProps) => {
 return (
     <div className="space-y-6">
         <h1 className="text-lg font-semibold text-gray-900 ">Links</h1>
