@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { PortableText } from "@portabletext/react";
 import { sanityClient2 } from "../../../../lib/sanity";
+import { TypedObject } from "@portabletext/types";
 import React, { Suspense } from "react";
 import { useParams, useRouter } from "next/navigation";
 import Link from "next/link";
@@ -11,7 +12,7 @@ interface Post {
   title: string;
   publishedAt: string;
   description?: string;
-  paragraph: any;
+  paragraph: TypedObject | TypedObject[];
   mainImage?: {
     asset: {
       url: string;
@@ -211,7 +212,7 @@ const PostContent = () => {
                   {post.paragraph && (
                     <div className="prose max-w-none text-justify">
                       <PortableText
-                        value={post.paragraph}
+                        value={post.paragraph as TypedObject | TypedObject[]}
                         components={{
                           block: {
                             h1: ({ children }) => (
