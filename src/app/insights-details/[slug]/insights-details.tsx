@@ -212,7 +212,7 @@ const PostContent = () => {
                   {post.paragraph && (
                     <div className="prose max-w-none text-justify">
                       <PortableText
-                        value={post.paragraph as TypedObject | TypedObject[]}
+                        value={post.paragraph}
                         components={{
                           block: {
                             h1: ({ children }) => (
