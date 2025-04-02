@@ -24,7 +24,7 @@ export default function ContactForm() {
     setLoading(true);
 
     const { data, error } = await supabase.from("Realm_Contact").insert([formData]);
-
+    console.log("Data submitted:", data); // Log the data to the console
     if (error) {
       setMessage("Failed to send message.");
       console.error(error);

@@ -89,7 +89,7 @@ const footerBlocks = [
  
  
 const FooterBlock = () => {
-    const [email, setEmail] = useState("");
+    // const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
     const emailRef = useRef<HTMLInputElement>(null);
     const handleSubscribe = async (e: React.FormEvent) => {
@@ -114,8 +114,9 @@ const FooterBlock = () => {
                     setMessage("Error subscribing! Try again.");
                 } else {
                     setMessage("Successfully subscribed!");
-                    setEmail("");
+                    
                 }
+                console.log("Data submitted:", data); // Log the data to the console
             } catch (err) {
                 setMessage("An unexpected error occurred. Please try again.");
             }
@@ -182,6 +183,7 @@ return (
       <button type="submit" className="outline-none w-full py-2.5 px-5 sm:w-max bg-black text-white rounded-md flex items-center justify-center">
         Subscribe
       </button>
+      {message && <p className="mt-2 text-sm">{message}</p>}
     </form>
             </div>
         </div>
