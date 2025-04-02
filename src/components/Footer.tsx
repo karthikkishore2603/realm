@@ -143,7 +143,7 @@ return (
           </div>
         </Link>
                 <p className="max-w-lg">
-                We create professional and user-friendly websites tailored to business needs, ensuring a strong online presence and seamless user experience
+                We craft professional, user-friendly websites designed to elevate your business, enhance your online presence, and deliver a seamless user experience.
                 </p>
             </div>
  
