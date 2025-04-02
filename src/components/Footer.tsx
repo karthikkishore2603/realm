@@ -117,32 +117,12 @@ const FooterBlock = () => {
                     
                 }
                 console.log("Data submitted:", data); // Log the data to the console
-            } catch (err) {
+            } catch (error) {
                 setMessage("An unexpected error occurred. Please try again.");
             }
       };
-    // const handleSubscribe = async (event: React.FormEvent<HTMLFormElement>) => {
-    //     event.preventDefault();
-    //     if (!email) {
-    //         setMessage("Please enter an email!");
-    //         return;
-    //     }
-
-    //     try {
-    //         const { data, error } = await supabase
-    //             .from("News_Letter")
-    //             .insert([{ email }]);
-
-    //         if (error) {
-    //             setMessage("Error subscribing! Try again.");
-    //         } else {
-    //             setMessage("Successfully subscribed!");
-    //             setEmail("");
-    //         }
-    //     } catch (err) {
-    //         setMessage("An unexpected error occurred. Please try again.");
-    //     }
-    // };
+    
+    
 
 return (
     <footer className="bg-gray-100  text-gray-700 ">
