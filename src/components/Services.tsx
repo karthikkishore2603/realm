@@ -77,7 +77,7 @@ const services = [
  
 const Features = () => {
 return (
-    <section className="py-20">
+    <section className="py-20" id="services">
       <div className="flex flex-col justify-center items-center gap-5 mb-10">
           <h2 className="text-4xl font-bold text-gray-900 flex justify-center">Our Services</h2>
           {/* <p className="text-gray-700 ">Lorem ipsum dolor sit amet consectetur adipisicing

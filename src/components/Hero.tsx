@@ -13,9 +13,11 @@ export default function BrandingPage() {
         <p className="text-2xl text-gray-600">
           We build your brand while you focus on your business.
         </p>
+        <a href='#contact'>
         <button className="mt-6 px-6 py-3 text-white bg-black rounded-full font-semibold shadow-md hover:bg-gray-800 transition">
           Contact Us
         </button>
+        </a>
       </div>
       
       {/* Right Section - Images & Visual Elements */}

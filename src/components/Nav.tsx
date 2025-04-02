@@ -34,9 +34,9 @@ export default function Navbar() {
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-1">
           <NavLink href="/">Home</NavLink>
-          <NavLink href="/services">Our Services</NavLink>
+          <NavLink href="#services">Our Services</NavLink>
           <NavLink href="/Insights">Insights</NavLink>
-          <NavLink href="/impactstudies">Impact Studies</NavLink>
+          {/* <NavLink href="/impactstudies">Impact Studies</NavLink> */}
           <div className="ml-4">
             <ContactButton />
           </div>
@@ -107,10 +107,11 @@ function MobileNavLink({ href, children, onClick }: { href: string; children: Re
 // Reusable ContactButton component
 function ContactButton({ fullWidth = false }) {
   return (
+    <a href="#contact" >
     <button 
       className={`bg-gradient-to-r from-black to-gray-800 text-white px-6 py-3 rounded-full font-medium text-sm uppercase tracking-wider transition-all duration-300 hover:shadow-lg hover:scale-105 transform ${fullWidth ? "w-full" : ""}`}
     >
       Contact Us
-    </button>
+    </button></a>
   );
 }

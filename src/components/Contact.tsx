@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function ContactForm() {
   return (
-    <section className="flex flex-col lg:flex-row items-center justify-between py-12 px-6 md:px-20">
+    <section className="flex flex-col lg:flex-row items-center justify-between py-12 px-6 md:px-20" id="contact">
       {/* Left Content */}
       <div className="w-full md:w-1/2 text-center md:text-left">
         <div className="relative flex items-center justify-center md:justify-start">

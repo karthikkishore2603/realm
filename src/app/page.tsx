@@ -17,12 +17,9 @@ export default function Page() {
     <Count />
     <About />
     <Trust />
-    <div id="our-services">
-  <Services />
-</div>
-
+    <Services />
     <Count2 />
-    <Testimonial />
+    {/* <Testimonial /> */}
     <Contact />
     <Editor />
     <Footer />
