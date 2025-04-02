@@ -1,6 +1,9 @@
+"use client"
+
 import Link from "next/link"
 import Image from "next/image"
-
+import { useState, useRef } from "react"
+import { supabase } from "../utils/supabaseClient"
 interface FooterItemProps {
     text: string;
     link: string;
@@ -22,6 +25,7 @@ interface FooterBlockItemProps {
 }
 
 const FooterBlockItem = ({  items }: FooterBlockItemProps) => {
+
 return (
     <div className="space-y-6">
         <h1 className="text-lg font-semibold text-gray-900 ">Links</h1>
@@ -85,6 +89,60 @@ const footerBlocks = [
  
  
 const FooterBlock = () => {
+    const [email, setEmail] = useState("");
+    const [message, setMessage] = useState("");
+    const emailRef = useRef<HTMLInputElement>(null);
+    const handleSubscribe = async (e: React.FormEvent) => {
+        e.preventDefault(); // Prevents the page from reloading
+        console.log("Subscribe button clicked!");
+         // Log the email to the console
+        
+        
+        console.log("Email submitted:", emailRef.current.value)
+        const email = emailRef.current?.value; // Get the value of the email input field
+            if (!email) {
+                setMessage("Please enter an email!");
+                return;
+            }
+    
+            try {
+                const { data, error } = await supabase
+                    .from("News_Letter")
+                    .insert([{ email }]);
+    
+                if (error) {
+                    setMessage("Error subscribing! Try again.");
+                } else {
+                    setMessage("Successfully subscribed!");
+                    setEmail("");
+                }
+            } catch (err) {
+                setMessage("An unexpected error occurred. Please try again.");
+            }
+      };
+    // const handleSubscribe = async (event: React.FormEvent<HTMLFormElement>) => {
+    //     event.preventDefault();
+    //     if (!email) {
+    //         setMessage("Please enter an email!");
+    //         return;
+    //     }
+
+    //     try {
+    //         const { data, error } = await supabase
+    //             .from("News_Letter")
+    //             .insert([{ email }]);
+
+    //         if (error) {
+    //             setMessage("Error subscribing! Try again.");
+    //         } else {
+    //             setMessage("Successfully subscribed!");
+    //             setEmail("");
+    //         }
+    //     } catch (err) {
+    //         setMessage("An unexpected error occurred. Please try again.");
+    //     }
+    // };
+
 return (
     <footer className="bg-gray-100  text-gray-700 ">
         <div className="max-w-7xl mx-auto px-5 sm:px-10 md:px-12 lg:px-5 grid grid-cols-2 lg:grid-cols-6 gap-12 lg:gap-16 py-20">
@@ -113,12 +171,18 @@ return (
  
             <div className="space-y-6 col-span-2">
                 <h1 className="text-lg font-semibold text-gray-900 ">News-letter</h1>
-                <form className="w-full max-w-2xl flex flex-col sm:flex-row gap-3">
-                    <input type="email" placeholder="johndoe@gmail.com" className="px-5 py-2.5 rounded-md outline-none flex-1 bg-gray-200 " />
-                    <button className="outline-none w-full py-2.5 px-5 sm:w-max bg-black text-white rounded-md flex items-center justify-center">
-                        Subscribe
-                    </button>
-                </form>
+                <form onSubmit={handleSubscribe} className="w-full max-w-2xl flex flex-col sm:flex-row gap-3">
+      <input
+        type="email"
+        name="email"
+        ref={emailRef}
+        placeholder="johndoe@gmail.com"
+        className="px-5 py-2.5 rounded-md outline-none flex-1 bg-gray-200"
+      />
+      <button type="submit" className="outline-none w-full py-2.5 px-5 sm:w-max bg-black text-white rounded-md flex items-center justify-center">
+        Subscribe
+      </button>
+    </form>
             </div>
         </div>
         <div className="max-w-7xl mx-auto px-5 sm:px-10 md:px-12 lg:px-5">
@@ -156,3 +220,5 @@ return (
 }
  
 export default FooterBlock
+
+// Removed the incorrect custom useRef function definition
