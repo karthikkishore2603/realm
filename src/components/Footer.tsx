@@ -98,7 +98,9 @@ const FooterBlock = () => {
          // Log the email to the console
         
         
-        console.log("Email submitted:", emailRef.current.value)
+        if (emailRef.current) {
+            console.log("Email submitted:", emailRef.current.value);
+        }
         const email = emailRef.current?.value; // Get the value of the email input field
             if (!email) {
                 setMessage("Please enter an email!");
