@@ -118,6 +118,7 @@ const FooterBlock = () => {
                 }
                 console.log("Data submitted:", data); // Log the data to the console
             } catch (error) {
+                console.error("Error inserting data:", error);
                 setMessage("An unexpected error occurred. Please try again.");
             }
       };
