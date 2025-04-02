@@ -91,7 +91,7 @@ const footerBlocks = [
 const FooterBlock = () => {
     // const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
-    const emailRef = useRef<HTMLInputElement>(null);
+    const emailRef = useRef<HTMLInputElement| null>(null);
     const handleSubscribe = async (e: React.FormEvent) => {
         e.preventDefault(); // Prevents the page from reloading
         console.log("Subscribe button clicked!");
