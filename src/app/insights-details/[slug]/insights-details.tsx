@@ -189,7 +189,7 @@ const PostContent = () => {
               <div className="flex flex-col md:flex-row gap-16">
                 {/* Image Column */}
                 {post.mainImage?.asset?.url && (
-                  <div className="md:w-1/2 lg:w-[46%] sticky sm:fixed top-24 h-[calc(100vh-6rem)]">
+                  <div className="md:w-1/2 lg:w-[46%] sticky top-24 h-[calc(100vh-6rem)]">
                     <Image
                       src={post.mainImage.asset.url}
                       alt={post.mainImage.alt || post.title || "Impact study image"}
