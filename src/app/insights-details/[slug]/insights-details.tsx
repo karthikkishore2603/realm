@@ -130,17 +130,17 @@ const PostContent = () => {
                 backgroundPosition: "center",
               }}
             >
-              <div className="container position-relative pt-30 pt-sm-50">
+              <div className="container position-relative pt-20 md:pt-30 pt-sm-50">
                 <div className="text-center">
                   <div className="row">
-                    <div className="col-md-8 offset-md-2 p-5">
-                      <h1 className="hs-title-1 mb-20 text-4xl md:text-6xl lg:text-7xl tracking-tight">
+                    <div className="col-md-8 offset-md-2 p-4 md:p-5">
+                      <h1 className="hs-title-1 mb-10 md:mb-20 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl tracking-tight">
                         {post.title}
                       </h1>
                       
-                      <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mt-6">
+                      <div className="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-4 mt-4 sm:mt-6">
                         {post.publishedAt && (
-                          <div className="text-white text-lg">
+                          <div className="text-white text-sm sm:text-base md:text-lg">
                             Published: {new Date(post.publishedAt).toLocaleDateString("en-US", {
                               year: "numeric",
                               month: "long",
@@ -150,14 +150,14 @@ const PostContent = () => {
                         )}
                         
                         {post.author?.name && (
-                          <div className="flex items-center gap-2 text-white">
+                          <div className="flex items-center gap-2 text-white text-sm sm:text-base md:text-lg">
                             {post.author?.image?.asset?.url && (
                               <Image
                                 src={post.author.image.asset.url}
                                 alt={post.author.name}
-                                width={32}
-                                height={32}
-                                className="rounded-full"
+                                width={28}
+                                height={28}
+                                className="rounded-full w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8"
                               />
                             )}
                             <span>{post.author.name}</span>
@@ -172,39 +172,41 @@ const PostContent = () => {
           </section>
 
           {/* Content Section */}
-          <section className="py-16">
-            <div className="max-w-7xl mx-auto px-5 sm:px-10 md:px-12 lg:px-5">
-              <div className="flex justify-start mb-8">
+          <section className="py-8 md:py-16">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10">
+              <div className="flex justify-start mb-6 md:mb-8">
                 <Link 
                   href="/Insights" 
-                  className="flex items-center text-blue-600 hover:text-blue-800 transition"
+                  className="flex items-center text-blue-600 hover:text-blue-800 transition text-sm md:text-base"
                 >
-                  <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-4 h-4 md:w-5 md:h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
                   </svg>
                   Back to Realm Insights
                 </Link>
               </div>
               
-              <div className="flex flex-col md:flex-row gap-16">
+              <div className="flex flex-col md:flex-row gap-6 md:gap-12 lg:gap-16">
                 {/* Image Column */}
                 {post.mainImage?.asset?.url && (
-                  <div className="md:w-1/2 lg:w-[46%] sticky top-24 h-[calc(100vh-6rem)]">
-                    <Image
-                      src={post.mainImage.asset.url}
-                      alt={post.mainImage.alt || post.title || "Impact study image"}
-                      width={1300}
-                      height={900}
-                      className="w-full h-auto object-cover rounded-lg"
-                      priority
-                    />
-                  </div>
-                )}
+  <div className="w-full md:w-1/2 lg:w-[46%] md:sticky md:top-24 h-auto md:h-[70vh] mb-6 md:mb-0">
+    <div className="relative aspect-video md:aspect-[4/3]">
+      <Image
+        src={post.mainImage.asset.url}
+        alt={post.mainImage.alt || post.title || "Impact study image"}
+        fill
+        className="w-full h-full object-cover rounded-lg"
+        priority
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 46vw"
+      />
+    </div>
+  </div>
+)}
 
                 {/* Content Column */}
-                <div className={`${post.mainImage?.asset?.url ? 'md:w-1/2 lg:w-[54%]' : 'w-full'} text-gray-700`}>
+                <div className={`${post.mainImage?.asset?.url ? 'w-full md:w-1/2 lg:w-[54%]' : 'w-full'} text-gray-700`}>
                   {post.description && (
-                    <p className="text-xl text-gray-600 mb-8 leading-relaxed text-bold text-justify" style={{color:"black"}}>
+                    <p className="text-lg md:text-xl text-gray-600 mb-6 md:mb-8 leading-relaxed font-medium text-justify" style={{color:"black"}}>
                       {post.description}
                     </p>
                   )}
@@ -216,13 +218,13 @@ const PostContent = () => {
                         components={{
                           block: {
                             h1: ({ children }) => (
-                              <h1 className="text-3xl font-bold mb-6 mt-8">{children}</h1>
+                              <h1 className="text-2xl sm:text-3xl font-bold mb-4 md:mb-6 mt-6 md:mt-8">{children}</h1>
                             ),
                             h2: ({ children }) => (
-                              <h2 className="text-2xl font-semibold mb-5 mt-7">{children}</h2>
+                              <h2 className="text-xl sm:text-2xl font-semibold mb-3 md:mb-5 mt-5 md:mt-7">{children}</h2>
                             ),
                             h3: ({ children }) => (
-                              <h3 className="text-xl font-medium mb-4 mt-6">{children}</h3>
+                              <h3 className="text-lg sm:text-xl font-medium mb-3 md:mb-4 mt-4 md:mt-6">{children}</h3>
                             ),
                             normal: ({ children }) => (
                               <p className="text-base leading-relaxed mb-4">{children}</p>
@@ -246,15 +248,16 @@ const PostContent = () => {
                           },
                           types: {
                             image: ({ value }) => (
-                              <div className="my-6">
+                              <div className="my-4 md:my-6">
                                 {value?.asset?.url && (
-                                  <Image
-                                    src={value.asset.url}
-                                    alt={value.alt || ""}
-                                    width={800}
-                                    height={600}
-                                    className="rounded-lg"
-                                  />
+                                  <div className="relative aspect-video w-full">
+                                    <Image
+                                      src={value.asset.url}
+                                      alt={value.alt || ""}
+                                      fill
+                                      className="rounded-lg object-cover"
+                                    />
+                                  </div>
                                 )}
                                 {value.caption && (
                                   <p className="text-center text-sm text-gray-500 mt-2">
